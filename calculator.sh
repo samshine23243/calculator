@@ -1,4 +1,9 @@
 read -p "Enter first number:" fno
 read -p "Enter second number:" sno
-sum=$(($fno+$sno))
-echo "Addition is:" $sum
+if [ $fno -gt $sno ]
+then
+	diff=$(($fno-$sno))
+else
+	diff=$(($sno-$fno))
+fi
+echo "difference is:" $diff
